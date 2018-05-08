@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorfulRingProgressView">
+        <attr name="bgColor"/>
+        <attr name="fgColorStart" format="color"/>
+        <attr name="fgColorEnd" format="color"/>
+        <attr name="strokeWidths" format="dimension"/>
+        <attr name="percent"/>
+        <attr name="startAngle"/>
+    </declare-styleable>
+
+    <declare-styleable name="CommonLayoutView">
+        <attr name="nameColor" format="color"/>
+        <attr name="contentColor" format="color"/>
+        <attr name="iconVisiblity" format="boolean"/>
+        <attr name="bottomLineVisiblity" format="boolean"/>
+        <attr name="arrowRightVisiblity" format="boolean"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="hintSize" format="dimension"/>
+        <attr name="name" format="string"/>
+        <attr name="content" format="string"/>
+        <attr name="contentMaxLength" format="integer"/>
+        <attr name="inputType" format="string"/>
+    </declare-styleable>
+    <!-- Pull to refresh (上拉下拉刷新) -->
+    <declare-styleable name="PullToRefresh">
+        <attr name="ptrAdapterViewBackground" format="reference|color"/>
+        <attr name="ptrHeaderBackground" format="reference|color"/>
+        <attr name="ptrHeaderTextColor" format="reference|color"/>
+        <attr name="ptrHeaderSubTextColor" format="reference|color"/>
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0"/>
+            <flag name="pullDownFromTop" value="0x1"/>
+            <flag name="pullUpFromBottom" value="0x2"/>
+            <flag name="both" value="0x3"/>
+        </attr>
+        <attr name="ptrShowIndicator" format="reference|boolean"/>
+        <attr name="ptrDrawable" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="Captcha">
+        <attr name="src" format="reference"/>
+        <attr name="progressDrawable" format="reference"/>
+        <attr name="thumbDrawable" format="reference"/>
+        <attr name="mode" format="enum">
+            <enum name="mode_bar" value="1"/>
+            <enum name="mode_nonbar" value="2"/>
+        </attr>
+        <attr name="max_fail_count" format="integer"/>
+        <attr name="blockSize" format="dimension"/>
+    </declare-styleable>
+</resources>

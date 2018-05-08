@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>彩虹H5测试页面</title>
+    <style>
+        h1{
+            background:#1f2034;
+            color:#fff;
+            padding:12px;
+            font-size:16px;/*字体大小18px*/
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+        button{
+            margin:16px
+        }
+        body {
+            display: block;
+            margin: 0px;
+        }
+        #pic{
+            width: 200px;
+            height: 215px;
+        }
+    </style>
+    <script>
+        function back(){
+            app.closeAppWebview();
+        }
+        function takePhoto(){
+            app.takePhoto();
+        }
+
+        function imageClick(){
+            app.getImageUrl(document.getElementById("pic").src);
+        }
+
+        function wechatShare(result){
+            var arr = result.split(",");
+            var url = document.getElementById("imgUrl");
+            var type = document.getElementById("type");
+            url.innerHTML = "图片分享url===" + arr[0];
+            if(arr[1] == 0){
+                type.innerHTML = "分享方式 == " + arr[1] + " ==分享微信好友";
+            }else{
+                type.innerHTML = "分享方式 == " + arr[1] + " ==分享朋友圈";
+            }
+
+        }
+
+        function getBase64ByApp(result){
+            var url = document.getElementById("imgUrl");
+            url.innerHTML = "Base64格式===" + result;
+        }
+
+    </script>
+</head>
+<body>
+<h1 align="center">彩虹H5测试页面</h1>
+<div><button id="back" onclick="back()">返回首页</button></div>
+<div><button id="takePhoto" onclick="takePhoto()">调用相机</button></div>
+<div><img id="pic" name="mm" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517384927794&di=2dbd2e2550dfbada0d3aedd4ea075117&imgtype=0&src=http%3A%2F%2Fimg.tupianzj.com%2Fuploads%2Fallimg%2F151223%2F9-1512232144103W.jpg"
+           onclick="imageClick()"></div>
+<div><p id="imgUrl"></p></div>
+<div><p id="type"></p></div>
+ <u>禁止在二环路内（含主路全线)通行。</u>
+ <u>禁止在二环路内（含主路全线)通行。</u>
+ <u>禁止在二环路内（含主路全线)通行。</u>
+
+            <ol>
+                <li>禁止在二环路内（含主路全线)通行</li>
+                <li>工作日早晚高峰，7时至9时，17时至20时，禁止在五环路主路、辅路及其以内道路行驶</li>
+                <li>工作日9时至17时，需遵守北京市尾号限行规定，限行尾号与北京号牌车辆相同，限行范围为五环路主路、辅路及其以内道路</li>
+            </ol>
+
+
+
+</canvas>
+</body>
+</html>

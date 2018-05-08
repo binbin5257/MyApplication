@@ -1,0 +1,261 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_bg"
+        android:orientation="vertical"
+        tools:context="cn.lds.ui.fragment.MeFragment">
+
+        <include layout="@layout/top_bar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/me_person_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/me_person_llyt"
+                android:layout_width="match_parent"
+                android:layout_height="130.6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bg_avatar"
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_marginLeft="15.4dp"
+                    android:src="@drawable/bg_headavatar"
+                    app:roundAsCircle="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="老老沙"
+                        android:textColor="#ffffffff"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/current_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7.7dp"
+                        android:singleLine="true"
+                        android:textColor="#ff676c87"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/action_next"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52.8dp"
+                android:background="#CC1f2034"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/me_kaquan"
+                        android:drawablePadding="11.6dp"
+                        android:text="卡券: 3"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_bg"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/me_jifen"
+                        android:drawablePadding="13.6dp"
+                        android:text="积分: 1200"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/me_order_llyt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10.6dp"
+            android:background="@color/car_detail_group_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我的订单"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_next"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/car_detail_group_bg"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="常用功能"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line_bg"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/me_trip_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="7.5dp"
+                    android:drawableTop="@drawable/me_trip_icon"
+                    android:gravity="center"
+                    android:text="行驶历史"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp"
+                    />
+
+                <TextView
+                    android:id="@+id/me_page_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="7.5dp"
+                    android:drawableTop="@drawable/me_page_icon"
+                    android:gravity="center"
+                    android:text="首页定制"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp"
+                    />
+
+                <TextView
+                    android:id="@+id/me_voice_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="7.5dp"
+                    android:drawableTop="@drawable/me_voice_icon"
+                    android:gravity="center"
+                    android:text="开机语音"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp"
+                    />
+
+                <TextView
+                    android:id="@+id/me_car_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="7.5dp"
+                    android:drawableTop="@drawable/me_car_icon"
+                    android:gravity="center"
+                    android:text="车辆管理"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/me_setting_llyt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/car_detail_group_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="设置"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

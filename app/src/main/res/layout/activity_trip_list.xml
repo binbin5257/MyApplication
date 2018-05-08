@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="cn.lds.ui.TripListActivity">
+
+
+        <include layout="@layout/top_bar"/>
+
+
+        <cn.lds.ui.view.calendar.CalendarLayout
+            android:id="@+id/calendarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical"
+            android:showDividers="none"
+            app:calendar_content_view_id="@+id/recyclerView"
+            app:default_status="shrink"
+            app:only_week_view="false">
+
+            <cn.lds.ui.view.calendar.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/car_detail_group_bg"
+                app:current_day_text_color="@color/white"
+                app:current_month_text_color="@color/white"
+                app:day_text_size="15sp"
+                app:month_view_show_mode="mode_all"
+                app:other_month_text_color="#ff8f8f99"
+                app:selected_text_color="@color/white"
+                app:selected_theme_color="#ffff6767"
+                app:week_line_background="@color/car_detail_group_bg"
+                app:month_view="cn.lds.ui.view.calendar.ColorfulMonthView"
+                app:week_view="cn.lds.ui.view.calendar.ColorfulWeekView"
+                />
+
+
+            <cn.lds.ui.view.group.GroupRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff1c1d30"
+                app:group_background="#ff121420"
+                app:group_center="false"
+                app:group_has_header="false"
+                app:group_height="53dp"
+                app:group_padding_left="16dp"
+                app:group_padding_right="16dp"
+                app:group_text_color="@color/white"
+                app:group_text_size="15sp"/>
+        </cn.lds.ui.view.calendar.CalendarLayout>
+
+
+    </LinearLayout>
+</layout>
